@@ -1,0 +1,28 @@
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1%;
+
+  }
+  li {
+    list-style: none;
+  }
+  html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+  }
+  
+body {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    
+    
+  }
+  #zag {
+    margin: 40px;
+      font-size: 20px;
+
+  }
