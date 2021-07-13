@@ -1,4 +1,7 @@
-
+:root {
+  --accent:#D7B399;
+  --red: #D84033;
+}
 .wrapper {
     display: flex;
     align-items: center;
@@ -17,7 +20,7 @@
 body {
     width: 1000px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color:#E5E5E5
     
     
   }
