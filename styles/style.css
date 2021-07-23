@@ -1,32 +1,31 @@
 :root {
-  --accent:#D7B399;
+  --accent: #D7B399;
   --red: #D84033;
 }
-.wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 1%;
 
-  }
-  li {
-    list-style: none;
-  }
- 
-  html {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-  }
-  
+li {
+  list-style: none;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
 body {
-    width: 1000px;
-    margin: 0 auto;
-    background-color:#E5E5E5
-    
-    
-  }
-  #zag {
-    margin: 40px;
-      font-size: 20px;
+  width: 1000px;
+  margin: 0 auto;
+  background-color: #E5E5E5
+}
 
-  }
+#zag {
+  margin: 40px;
+  font-size: 20px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1%;
+}
