@@ -8,31 +8,32 @@
     <link href="styles/style.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&display=swap&family=Material+Icons"
+        rel="stylesheet">
+    <!--Подключила иконки через &family=Material+Icons-->
 
     <title>THE LOOP</title>
+
 </head>
 
 <body>
     <header>
-        <h1> Интернет магазин одежды "THE LOOP" </h1>
+        <h1 class="visually-hidden"> Интернет магазин одежды "THE LOOP" </h1>
         <!--Тут будет скрытый заголовок-->
         <nav>
             <ul class="main-nav">
-                <li class="main-nav__list"><a href="">Для мужчин <img src="img/treug_vniz.svg" alt=""> </a></li> <!--Мне нужно отдельно изображение треугольника указывать как элемент?-->
-                <li class="main-nav__list"><a href="">Для женщин <img src="img/treug_vniz.svg" alt=""></a></li>
-                <li class="main-nav__list"><a href="">Для детей <img src="img/treug_vniz.svg" alt=""></a></li>
-                <li class="main-header"> <img class="logo" src="img/logo.svg" alt="Логотип">THE LOOP</li>
-                <!--Не уверена насчет блока логотипа,но также использую его в футере-->
-                <li class="main-nav__list"><a href="">Оплата </a></li>
-                <li class="main-nav__list"><a href="">Доставка </a></li>
+                <li class="main-nav__item"><a class="main-nav__treug" href="">Для мужчин </a></li>
+
+                <li class="main-nav__item"><a class="main-nav__treug" href="">Для женщин </a></li>
+                <li class="main-nav__item"><a class="main-nav__treug" href="">Для детей </a></li>
+                <li class="logo"> <img class="logo__img" src="img/logo.svg" alt="Логотип"> <span class=logo__text> THE
+                        LOOP </span> </li>
+                <li class="main-nav__item"><a href="">Оплата </a></li>
+                <li class="main-nav__item"><a href="">Доставка </a></li>
                 <li> <a href=""><img class="basket" src="img/basket.svg" alt="Корзина"></a> </li>
-                <li>
-                    <img src="img/treug_vlevo.svg" alt="">
-                    <!--пока не понимаю как сделать через див прямоугольник-->
-                    <!--И даже не понимаю в макете,что это такое,поэтому не знаю как разметить по БЭМ-->
-                </li>
+                <li><span class="basket__amount"> 5 </span> </li>
+
+
 
             </ul>
         </nav>
@@ -40,55 +41,88 @@
     </header>
     <main>
         <section>
-            <h4> Зимняя распродажа </h4>
-            <!--Может ли в section быть section ? -->
+            <h4 class="visually-hidden">Зимняя распродажа</h4>
+            <!-- section  может быть в section -->
             <ul>
                 <li>
                     <section class="karusel">
-                        <h4 class="karusel__header">Кроссовки со скидкой</h4>
-                        <p class="karusel__desk">Скидки до 90%</p>
-                        <a class="look-link" href="">Смотреть модели</a>
-                        <img class="karusel__img" src="img/shoes.png" alt="Кроссовок_красный_найк">
-                        <div>
-                            <div class="karusel__price_wrong">Old price</div>
-                            <!--Сделала с модификатором,но не знаю,может нужно как два разных элемента?-->
-                            <div class="karusel__price">New price</div>
+                        <div class="karusel-part">
+                            <h4> Зимняя распродажа </h4>
+                            <h4 class="karusel__header"><span class="visually-hidden">Кроссовки со скидкой</span></h4>
+                            <!--!!!!!! Что проще,прописывать всем лишний класс или каждому классу подписывать что он скрытый-->
+                            <p class="karusel__desc">Скидки до 90%</p>
+                            <a class="btn" href="">СМОТРЕТЬ МОДЕЛИ</a>
+                        </div>
+
+
+                        <div class="karusel-part">
+                            <img class="karusel__img" src="img/shoes.png" alt="Кроссовок_красный_найк">
+                        </div>
+                        <div class="karusel-part">
+                            <div class="karusel__price_old">9 900 &#8381; </div>
+
+                            <div class="karusel__price">1 900 &#8381; </div>
+
+
                         </div>
                     </section>
                 </li>
                 <li>
                     <section class="karusel">
-                        <h4 class="karusel__header">Платья со скидкой</h4>
-                        <p class="karusel__desk">Скидки до 80%</p>
-                        <a class="look-link" href="">Смотреть модели</a>
-                        <img class="karusel__img" src="img/dresskarus.png" alt="Платье_красное_без_рукавов">
-                        <div>
-                            <div class="karusel__price_wrong">Old price</div>
-                            <div class="karusel__price">New price</div>
+                        <div class="karusel-part">
+                            <h4> Зимняя распродажа </h4>
+                            <h4 class="karusel__header"><span class="visually-hidden">Платья со скидкой</span></h4>
+                            <p class="karusel__desc">Скидки до 80%</p>
+                            <a class="btn" href="">СМОТРЕТЬ МОДЕЛИ</a>
+                        </div>
+
+                        <div class="karusel-part">
+                            <img class="karusel__img" src="img/dresskarus.png" alt="Платье_красное_без_рукавов">
+                        </div>
+
+                        <div class="karusel-part">
+
+                            <div class="karusel__price_old">9 900 &#8381;</div>
+                            <div class="karusel__price">1 900 &#8381;</div>
+                        </div>
+
+                    </section>
+                </li>
+                <li>
+                    <section class="karusel">
+                        <div class="karusel-part">
+                            <h4> Зимняя распродажа </h4>
+                            <h4 class="karusel__header"><span class="visually-hidden"> Штаны со скидкой</span></h4>
+                            <p class="karusel__desc">Скидки до 70%</p>
+                            <a class="btn" href="">СМОТРЕТЬ МОДЕЛИ</a>
+                        </div>
+                        <div class="karusel-part">
+                            <img class="karusel__img" src="img/trouserskarus.png" alt="Штаны_черные_спортивные">
+                        </div>
+                        <div class="karusel-part">
+                            <div>
+                                <div class="karusel__price_old">9 900 &#8381; </div>
+                                <div class="karusel__price">1 900 &#8381;</div>
+                            </div>
                         </div>
                     </section>
                 </li>
                 <li>
                     <section class="karusel">
-                        <h4 class="karusel__header">Штаны со скидкой</h4>
-                        <p class="karusel__desk">Скидки до 70%</p>
-                        <a class="look-link" href="">Смотреть модели</a>
-                        <img class="karusel__img" src="img/trouserskarus.png" alt="Штаны_черные_спортивные">
-                        <div>
-                            <div class="karusel__price_wrong">Old price</div>
-                            <div class="karusel__price">New price</div>
+                        <div class="karusel-part">
+                            <h4> Зимняя распродажа </h4>
+                            <h4 class="karusel__header"><span class="visually-hidden">Рубашки со скидкой</span></h4>
+                            <p class="karusel__desc">Скидки до 60%</p>
+                            <a class="btn" href="">СМОТРЕТЬ МОДЕЛИ</a>
                         </div>
-                    </section>
-                </li>
-                <li>
-                    <section class="karusel">
-                        <h4 class="karusel__header">Рубашки со скидкой</h4>
-                        <p class="karusel__desk">Скидки до 60%</p>
-                        <a class="look-link" href="">Смотреть модели</a>
-                        <img class="karusel__img" src="img/shirtkarus.png" alt="Белая_рубашка">
-                        <div>
-                            <div class="karusel__price_wrong">Old price</div>
-                            <div class="karusel__price">New price</div>
+                        <div class="karusel-part">
+                            <img class="karusel__img" src="img/shirtkarus.png" alt="Белая_рубашка">
+                        </div>
+                        <div class="karusel-part">
+                            <div>
+                                <div class="karusel__price_old">9 900 &#8381;</div>
+                                <div class="karusel__price">1 900 &#8381;</div>
+                            </div>
                         </div>
                     </section>
                 </li>
@@ -99,34 +133,37 @@
             <h2 class="delivery__header"> Бесплатная доставка </h2>
             <!--Тут будет скрытый заголовок-->
             <p class="delivery__text_subtitle"> Бесплатная доставка от 3000р</p>
-            <p class="delivery__text"> Сделайте заказ и получите подарок! </p> <!--Или нужно сделать два элмента?-->
+            <p class="delivery__text"> Сделайте заказ и получите подарок! </p>
+            <!--Или нужно сделать два элмента?-->
         </section>
         <section class="collection">
             <h3 class="collection__header"> Мужская коллекция </h3>
-            <p class="collection__desk">Обувь,пуловеры,костюмы</p>
-            <img class="collection__img" src="img/boy.png" alt="Мужчина">
+            <p class="collection__desc">Обувь,пуловеры,костюмы</p>
             <a href="" class="collection__link"> -> </a>
+            <img class="collection__img" src="img/boy.png" alt="Мужчина">
+
         </section>
         <section class="collection">
             <h3 class="collection__header"> Женская коллекция </h3>
-            <p class="collection__desk">Обувь,пуловеры,костюмы </p>
-            <img class="collection__img" src="img/girl.png" alt="Девушка">
+            <p class="collection__desc">Обувь,пуловеры,костюмы </p>
             <a href="" class="collection__link"> -> </a>
+            <img class="collection__img" src="img/girl.png" alt="Девушка">
+
         </section>
         <section class="catalog">
             <h4 class="catalog__header"> Платья </h4>
             <!--Тут будет скрытый заголовок-->
-            <ul class="catalog__item">
+            <ul class="catalog__items">
                 <!--Или мне в  каждом элементе списка надо прописать,что это элемент catalog__item? -->
                 <li><img src="img/dress11.png" alt="Красное_платье"> Платья </li>
                 <!--Тут не уверена,что будет элементом:элемент списка или изображение-->
-                <li><img src="img/dress11.png" alt="Красное_платье"> Платья </li>
-                <li><img src="img/dress11.png" alt="Красное_платье"> Платья </li>
-                <li><img src="img/dress11.png" alt="Красное_платье"> Платья </li>
-                <li><img src="img/dress44.png" alt="Красное_платье"> Платья </li>
-                <li><img src="img/dress44.png" alt="Красное_платье"> Платья </li>
-                <li><img src="img/dress44.png" alt="Красное_платье"> Платья </li>
-                <li><img src="img/dress44.png" alt="Красное_платье"> Платья </li>
+                <li class="catalog__item"><img src="img/dress11.png" alt="Красное_платье"> Платья </li>
+                <li class="catalog__item"><img src="img/dress11.png" alt="Красное_платье"> Платья </li>
+                <li class="catalog__item"><img src="img/dress11.png" alt="Красное_платье"> Платья </li>
+                <li class="catalog__item"><img src="img/dress44.png" alt="Красное_платье"> Платья </li>
+                <li class="catalog__item"><img src="img/dress44.png" alt="Красное_платье"> Платья </li>
+                <li class="catalog__item"><img src="img/dress44.png" alt="Красное_платье"> Платья </li>
+                <li class="catalog__item"><img src="img/dress44.png" alt="Красное_платье"> Платья </li>
 
             </ul>
         </section>
@@ -137,33 +174,34 @@
                 <li class="new-model__item">
                     <img class="new-model__img" src="img/dress88.png" alt="Золотое_платье">
                     <p class="new-model__name"> Коктейльное платье</p>
-                    <p class="new-model__price"> ₽ 40 000</p> <!--Цена это элемент или модификатор? По сути тот же текст,просто по другому оформлен-->
+                    <p class="new-model__price"> &#8381; 40 000</p>
+                    <!--Цена это элемент или модификатор? По сути тот же текст,просто по другому оформлен-->
                 </li>
 
                 <li class="new-model__item">
                     <img class="new-model__img" src="img/dress88.png" alt="Золотое_платье">
                     <p class="new-model__name"> Коктейльное платье</p>
-                    <p class="new-model__price"> ₽ 40 000</p>
+                    <p class="new-model__price"> &#8381; 40 000</p>
                 </li>
                 <li class="new-model__item">
                     <img class="new-model__img" src="img/dress88.png" alt="Золотое_платье">
                     <p class="new-model__name"> Коктейльное платье</p>
-                    <p class="new-model__price"> ₽ 40 000</p>
+                    <p class="new-model__price"> &#8381; 40 000</p>
                 </li>
                 <li class="new-model__item">
                     <img class="new-model__img" src="img/dress88.png" alt="Золотое_платье">
                     <p class="new-model__name"> Коктейльное платье</p>
-                    <p class="new-model__price"> ₽ 40 000</p>
+                    <p class="new-model__price"> &#8381; 40 000</p>
                 </li>
             </ul>
-            <a class="look-link" href="">Все модели</a>
+            <a class="btn" href="">Все модели</a>
         </section>
         <section class="form-email">
             <h2 class="form-email__header"> Форма для получения скидок </h2>
             <!--Тут будет скрытый заголовок-->
             <p class="form-email__desc">Получайте скидки и подарки</p>
             <form class="form-email__form" method="POST" action="order.php">
-                <input class="form-email__type" type="email" name="email">
+                <input class="form-email__input" type="email" name="email">
                 <button class="form-email__button" type="submit">Подписаться</button>
                 <!--Мне нужно класс на инпут и кнопку ставить или класса в самой форме достаточно?-->
             </form>
@@ -174,70 +212,78 @@
                 <li class="new-model__item">
                     <img class="new-model__img" src="img/dress77.png" alt="Красное_коктейльное_платье">
                     <p class="new-model__name"> Коктейльное платье</p>
-                    <p class="new-model__price"> ₽ 40 000</p>
+                    <p class="new-model__price"> &#8381; 40 000</p>
                 </li>
                 <li class="new-model__item">
                     <img class="new-model__img" src="img/dress77.png" alt="Красное_коктейльное_платье">
                     <p class="new-model__name"> Коктейльное платье</p>
-                    <p class="new-model__price"> ₽ 40 000</p>
+                    <p class="new-model__price"> &#8381; 40 000</p>
                 </li>
                 <li class="new-model__item">
                     <img class="new-model__img" src="img/dress77.png" alt="Красное_коктейльное_платье">
                     <p class="new-model__name"> Коктейльное платье</p>
-                    <p class="new-model__price"> ₽ 40 000</p>
+                    <p class="new-model__price"> &#8381; 40 000</p>
                 </li>
                 <li class="new-model__item">
                     <img class="new-model__img" src="img/dress77.png" alt="Красное коктейльное платье">
                     <p class="new-model__name"> Коктейльное платье</p>
-                    <p class="new-model__price"> ₽ 40 000</p>
+                    <p class="new-model__price"> &#8381; 40 000</p>
                 </li>
             </ul>
-            <a class="look-link" href="">Все модели</a>
+            <a class="btn" href="">Все модели</a>
         </section>
 
     </main>
     <footer class="footer">
-        <ul class="footer__item"> <!--Делаю так из логики,что все элементы списка одинаковые, а те,которые не одинаковые у меня имеют модификатор-->
-            <li class="main-header"> <img class="logo" src="img/logo.svg" alt="Логотип"> THE LOOP </li> <!--Тут блоки,котоыре уже использовались ранее-->
+        <div class="footer__purpose">
 
-                <li class="footer__item_quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus egestas
-                    elit, at eleifend
-                    elit ornare ut. </li>
-            
-        </ul>
+            <div class="logo"> <img class="logo__img" src="img/logo.svg" alt="Логотип"> <span class=logo__text> THE LOOP
+                </span> </div>
 
-        <ul class="footer__item">
-            <li class="footer__item_header"> Основные ссылки </li>
+
+            <p class="footer__purpose_quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus
+                egestas
+                elit, at eleifend
+                elit ornare ut. </p>
+
+        </div>
+
+        <ul class="footer__items">
+            <li class="footer__items-header"> Основные ссылки </li>
             <li> <a href=""> О компании </a></li>
             <li> <a href="">Каталог</a> </li>
             <li> <a href="">Доставка</a> </li>
             <li> <a href="">Оплата </a></li>
         </ul>
-        <ul class="footer__item">
-            <li class="footer__item_header"> Категории </li>
+        <ul class="footer__items">
+            <li class="footer__items-header"> Категории </li>
             <li> <a href="">Мужская одежда </a></li>
             <li> <a href="">Женская одежда </a></li>
             <li> <a href="">Детская одежда </a></li>
             <li> <a href="">Для животных </a></li>
         </ul>
-        <ul class="footer__item">
-            <li class="footer__item_header"> Полезные ссылки </li>
+        <ul class="footer__items">
+            <li class="footer__items-header"> Полезные ссылки </li>
             <li> <a href="">Таблица размеров</a> </li>
             <li> <a href="">Блог о моде</a> </li>
             <li> <a href="">Наша миссия </a></li>
 
         </ul>
-        <ul class="social"> <!--Я бы сделала это тоже в footer__item,но вдруг блок с соц сетями захотят еще где-то разместить -->
-            
-            <li class="social__item_header">Соц сети</li>
-            <li class="social__item"><a href="" class="social__item_vk" target="_blank"><img src="img/vk.svg"
-                        alt="logo vk">VK.com</a></li>
-            <!--Если брать из примера то должно быть  <li class="social__item"><a href="" class="social__item_link  social__item_link_vk" > -->
-            <li class="social__item"><a href="" class="social__item_fb" target="_blank"><img src="img/fb.svg"
-                        alt="logo fb">Facebook</a></li>
-            <li class="social__item"><a href="" class="social__item_inst" target="_blank"><img src="img/inst.svg"
-                        alt="logo inst">Instagram</a></li>
+        <ul class="footer__items">
+
+
+            <li class="footer__items-header">Соц сети</li>
+            <li class="social-icon"><a href="" class="social-icon__link_vk" target="_blank"><img
+                        class="social-icon__img" src="img/vk.svg" alt="logo vk">VK.com</a></li>
+
+            <li class="social-icon"><a href="" class="social-icon__link_fb" target="_blank"><img
+                        class="social-icon__img" src="img/fb.svg" alt="logo fb">Facebook</a></li>
+            <li class="social-icon"><a href="" class="social-icon__link_inst" target="_blank"><img
+                        class="social-icon__img" src="img/inst.svg" alt="logo inst">Instagram</a></li>
         </ul>
+        <span class="footer__copyright">Copyright © 2019. Все права защищены</span>
+        <span class="footer__privacy">Политика приватности</span>
+        <!--Я бы все в footer__copyright сделала,т.к стиль и размер текста одинаковый,но там между ними расстрояние,так что наверное удобнее двумя элементами-->
     </footer>
 </body>
 
