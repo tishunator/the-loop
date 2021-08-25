@@ -1,0 +1,309 @@
+:root {
+    --accent: #D7B399;
+    --red: #D84033;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  html {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F9F6F1;
+  }
+  
+  body {
+    width: 1920px;
+    margin: 0 auto;
+  }
+  
+  .main-nav {
+    display: flex;
+    width: 1228px;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 17%;
+    flex: 1
+  }
+  
+  .main-nav__treug {
+    position: relative;
+  }
+  
+  .main-nav__treug::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    border: 5px solid;
+    border-color: transparent;
+    border-top-color: black;
+    top: 65%;
+    right: -5%;
+    transform: translate(110%, -25%);
+  }
+  
+  .basket__amount {
+    display: inline-block;
+    background-color: var(--accent);
+    border-right: 20px solid var(--accent);
+    border-left: 10px solid var(--accent);
+    position: relative;
+    margin-left: 0px;
+    height: 20px;
+  }
+  
+  .basket__amount::before {
+    content: "";
+    display: inline-block;
+    border: 10px solid var(--accent);
+    border-color: transparent;
+    border-right-color: var(--accent);
+    border-right-width: 40px;
+    position: absolute;
+    transform: translate(-120%, 0%);
+  }
+  
+  .visually-hidden {
+    display: none;
+  }
+  
+  .logo__text {
+    font-weight: 700;
+    font-size: 24px;
+  }
+  
+  .main-nav__item {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  h4 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+  }
+  
+  .karusel__desc {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 67px;
+    letter-spacing: 0.04em;
+  }
+  
+  .btn {
+    background-color: var(--accent);
+    padding-top: 17px;
+    padding-bottom: 18px;
+    padding-right: 30px;
+    padding-left: 29px;
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+    letter-spacing: 0.03em;
+    position: absolute;
+    margin-top: 20px;
+  }
+  
+  .karusel__price {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 51px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--red)
+  }
+  
+  .karusel__price_old {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: right;
+    letter-spacing: 0.05em;
+    text-decoration-line: line-through;
+    text-transform: uppercase;
+  }
+  
+  .logo {
+    position: relative;
+    padding: 50px;
+  }
+  
+  .logo__img {
+    position: absolute;
+    transform: translate(-120%, -10%)
+  }
+  
+  .basket {
+    padding-left: 50px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  
+  .karusel__img {
+    width: 100%;
+    object-fit: contain;
+  }
+  
+  .karusel__img_size {
+    width: 400px;
+    object-fit: contain;
+  }
+  
+  .karusel__content_price {
+    position: absolute;
+    transform: translate(900px);
+    margin-left: 130px;
+    margin-top: 80px;
+  }
+  
+  .karusel__content {
+    align-items: center;
+  }
+  
+  #r1:checked~.s1 {
+    margin-left: 0;
+    /*контролирует насколько вправо смещается*/
+  }
+  
+  #r2:checked~.s1 {
+    margin-left: -25%;
+  }
+  
+  #r3:checked~.s1 {
+    margin-left: -50%;
+  }
+  
+  #r4:checked~.s1 {
+    margin-left: -75%;
+  }
+  
+  .delivery {
+    width: 1920px;
+    height: 235px;
+    background-color: #212121;
+  }
+  
+  .delivery__text_subtitle {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: white;
+    padding-top: 70px;
+    text-transform: uppercase;
+  }
+  
+  .delivery__text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 20px;
+  }
+  
+  .collection {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 350px;
+  }
+  
+  .collection__header {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    color: #000000;
+  }
+  
+  .collection__desc {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .collection__button {
+    background-color: var(--accent);
+    width: 60px;
+    height: 34px;
+    padding-left: 40px;
+    position: absolute;
+    /*Не знаю можно ли злоупотреблять этими позишионами абсолют..*/
+    margin-top: 20px;
+  }
+  
+  .collection__content {
+    justify-self: right;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  
+  .collection__content_right {
+    margin-top: 30px;
+  }
+  
+  .collection__img {
+    margin-top: 40px;
+  }
+  
+  .catalog__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    position: absolute;
+    width: 1200px;
+    justify-items: center;
+  }
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  
+  font-size: 18px;
+  background:#F9F6F1;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}

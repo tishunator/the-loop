@@ -16,13 +16,14 @@ html {
 body {
   width: 1270px;
   margin: 0 auto;
+
 }
 
 .main-nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 1%;
+  margin-left: -30px;
   flex:1
   
 }
@@ -67,7 +68,6 @@ body {
 .visually-hidden {
   display: none;
 }
-/*visibility:hidden;*/
 
 .logo__text {
   font-weight: 700;
@@ -110,27 +110,57 @@ h4 {
   color: white;
   letter-spacing: 0.03em;
   position: absolute;
-    margin-top: 10px;
+  margin-top: 50px;
 }
+.karusel {
+display: flex;
 
+}
 div {
   white-space: nowrap
 }
+
+
+.karusel__price {
+  
+font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 42px;
+line-height: 51px;
+text-align: right;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+color:var(--red)
+
+}
+
+.karusel__price_old {
+  font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 29px;
+text-align: right;
+letter-spacing: 0.05em;
+text-decoration-line: line-through;
+text-transform: uppercase;
+}
 .logo {
-    position: relative;
-    padding:50px;
-  }
-  .logo__img {
-    position: absolute;
-    transform: translate(-120%, -10%)
-  }
-  .basket {
-    padding-left: 50px;
-  }
+  position: relative;
+  padding:50px;
+}
+.logo__img {
+  position: absolute;
+  transform: translate(-120%, -10%)
+}
+.basket {
+  padding-left: 50px;
+}
 
 
 
-  *{
+*{
     margin:0;
     padding: 0;
   }
@@ -141,15 +171,16 @@ div {
       width: 1100px;
       height: 600px;
       overflow: hidden;
-      border: solid black;
+      
+      position: relative
      
   }
   /*зачем слайдер и миддл разделены? если добавить значения из миддла в слайдер вроде ничего не меняется*/
    .middle {
     position: absolute;
-    top:50%;
+    
     left:50%;
-    transform: translate(-50%, -50%);
+    transform: translate( -50%);
 } 
 
 .navigat {
@@ -189,20 +220,39 @@ input[name="r"]{
 .karusel {
   width: 25%;
   transition: all .6s ease ;  /*делает красивое скольжение между слайдами*/
+  
 
 
 }
-
-.karusel img {
-  width: 40%;
-  height: 40%%;
-  margin-left: 50%;
-
-  
-  
+/*Отсюда начинаю менять*/
+.karusel__img  {
+  width: 100%;
+ object-fit: contain;
  
- 
+
 }
+
+div[class*="karusel-part_right"] {
+  flex-grow: 1;
+  transform: translate(10px, 25%);
+}
+div[class*="karusel-part_price"] {
+  position: absolute;
+  transform: translate(900px);
+}
+picture {
+  width: 563px;
+    height: 385px;
+    display: block;
+}
+ .changesize{
+  width: 400px;
+  object-fit: contain;
+}
+
+
+
+
 #r1:checked ~ .s1 {
     margin-left: 0; /*контролирует насколько вправо смещается*/
 }

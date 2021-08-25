@@ -1,0 +1,509 @@
+:root {
+  --accent: #D7B399;
+  --red: #D84033;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F9F6F1;
+}
+
+body {
+  width: 1920px;
+  margin: 0 auto;
+}
+
+.main-nav {
+  display: flex;
+  width: 1228px;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 17%;
+  flex: 1
+}
+
+.main-nav__treug {
+  position: relative;
+}
+
+.main-nav__treug::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border: 5px solid;
+  border-color: transparent;
+  border-top-color: black;
+  top: 65%;
+  right: -5%;
+  transform: translate(110%, -25%);
+}
+
+.basket__amount {
+  display: inline-block;
+  background-color: var(--accent);
+  border-right: 20px solid var(--accent);
+  border-left: 10px solid var(--accent);
+  position: relative;
+  margin-left: 0px;
+  height: 20px;
+}
+
+.basket__amount::before {
+  content: "";
+  display: inline-block;
+  border: 10px solid var(--accent);
+  border-color: transparent;
+  border-right-color: var(--accent);
+  border-right-width: 40px;
+  position: absolute;
+  transform: translate(-120%, 0%);
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.logo__text {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.main-nav__item {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+h4 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: 0.02em;
+}
+
+.karusel__desc {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 67px;
+  letter-spacing: 0.04em;
+}
+
+.btn {
+  background-color: var(--accent);
+  padding-top: 17px;
+  padding-bottom: 18px;
+  padding-right: 30px;
+  padding-left: 29px;
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  letter-spacing: 0.03em;
+  position: absolute;
+  margin-top: 20px;
+}
+
+.karusel__price {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 51px;
+  text-align: right;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--red)
+}
+
+.karusel__price_old {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: right;
+  letter-spacing: 0.05em;
+  text-decoration-line: line-through;
+  text-transform: uppercase;
+}
+
+.logo {
+  position: relative;
+  padding: 50px;
+}
+
+.logo__img {
+  position: absolute;
+  transform: translate(-120%, -10%)
+}
+
+.basket {
+  padding-left: 50px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.slider {
+  width: 1100px;
+  height: 600px;
+  overflow: hidden;
+  position: relative
+}
+
+/*зачем слайдер и миддл разделены? если добавить значения из миддла в слайдер вроде ничего не меняется*/
+
+.middle {
+  position: relative;
+  top: 300px;
+  left: 500px;
+  width: 1228px;
+  transform: translate(-12%, -50%);
+}
+
+.navigat {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.bar {
+  height: 8px;
+  width: 30px;
+  margin: 6px;
+  cursor: pointer;
+  background-color: var(--accent);
+  opacity: .6;
+  border-radius: 10px;
+  transition: all .4s ease;
+}
+
+.bar:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+input[name="r"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.slides {
+  width: 400%;
+  height: 100%;
+  display: flex;
+  align-items: center
+}
+
+.karusel {
+  width: 25%;
+  transition: all .6s ease;
+  /*делает красивое скольжение между слайдами*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.karusel__img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.karusel__img_size {
+  width: 400px;
+  object-fit: contain;
+}
+
+.karusel__content_price {
+  position: absolute;
+  transform: translate(900px);
+  margin-left: 130px;
+  margin-top: 80px;
+}
+
+.karusel__content {
+  align-items: center;
+}
+
+#r1:checked~.s1 {
+  margin-left: 0;
+  /*контролирует насколько вправо смещается*/
+}
+
+#r2:checked~.s1 {
+  margin-left: -25%;
+}
+
+#r3:checked~.s1 {
+  margin-left: -50%;
+}
+
+#r4:checked~.s1 {
+  margin-left: -75%;
+}
+
+.delivery {
+  width: 1920px;
+  height: 235px;
+  background-color: #212121;
+}
+
+.delivery__text_subtitle {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: white;
+  padding-top: 70px;
+  text-transform: uppercase;
+}
+
+.delivery__text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 20px;
+}
+
+.collection {
+  width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 350px;
+}
+
+.collection__header {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+
+.collection__desc {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.collection__button {
+  background-color: var(--accent);
+  width: 60px;
+  height: 34px;
+  padding-left: 40px;
+  position: absolute;
+  /*Не знаю можно ли злоупотреблять этими позишионами абсолют..*/
+  margin-top: 20px;
+}
+
+.collection__content {
+  justify-self: right;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.collection__content_right {
+  margin-top: 30px;
+}
+
+.collection__img {
+  margin-top: 40px;
+}
+
+.catalog__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+  width: 1250px;
+  justify-items: center;
+  margin-left: 336px;
+}
+
+.catalog__item_desc {
+  position: absolute;
+  top: 150px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 26px;
+  /* identical to box height */
+  letter-spacing: 0.03em;
+  margin: -27px;
+}
+
+.catalog__item_desc-bottom {
+  position: absolute;
+  bottom: 100px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 26px;
+  /* identical to box height */
+  letter-spacing: 0.03em;
+  margin-left: -38px;
+}
+
+.catalog__item_bottom {
+  margin-left: 40px;
+}
+
+.new-model__catalog {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 1250px;
+  justify-items: center;
+  margin-left: 336px;
+  margin-right: 20px;
+}
+
+.catalog {
+  position: relative;
+}
+
+.new-model__header {
+  margin-left: 40%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.btn_all-model {
+  margin-left: 800px;
+  margin-top: 70px;
+}
+
+.new-model__item__corner {
+  width: 200px;
+  height: 100%;
+  border: 5px solid var(--accent);
+  position: relative;
+  background-color: #F9F6F1;
+  padding: 5px;
+}
+
+.new-model__item__corner::after, .new-model__item__corner::before {
+  content: "";
+  display: block;
+  background-color: transparent;
+  z-index: 20;
+  position: absolute;
+}
+
+.new-model__item__corner::after {
+  width: 100%;
+  height: calc(100% - 20px);
+  left: -5px;
+  top: 10px;
+  border-left: 5px solid #F9F6F1;
+  border-right: 5px solid #F9F6F1;
+}
+
+.new-model__item__corner::before {
+  width: calc(100% - 20px);
+  height: 100%;
+  left: 10px;
+  top: -5px;
+  border-top: 5px solid #F9F6F1;
+  border-bottom: 5px solid #F9F6F1;
+}
+
+.new-model__img {
+  margin-left: 36px;
+}
+
+.new-model__name {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.new-model__price {
+  margin-top: 15px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: var(--accent);
+}
+
+.form-email {
+  width: 1920px;
+  background-color: #212121;
+  height: 150px;
+  margin-top: 250px;
+}
+
+.form-email__desc {
+  color: white;
+  margin-left: 500px;
+  margin-top: 50px;
+  position: absolute;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.form-email__form {
+  margin-left: 1100px;
+  margin-top: 50px;
+  position: absolute;
+}
+
+.form-email__button {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 20px 10px 20px;
+  background-color: var(--accent);
+  color: white
+}
+
+.form-email__input {
+  height: 35px;
+  margin-right: 10px;
+  width: 200px;
+}
