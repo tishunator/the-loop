@@ -393,6 +393,11 @@ input[name="r"] {
   margin-left: 40%;
   margin-top: 100px;
   margin-bottom: 50px;
+  font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0.04em;
 }
 
 .btn_all-model {
@@ -507,3 +512,114 @@ input[name="r"] {
   margin-right: 10px;
   width: 200px;
 }
+
+/* Что такое webkit*/
+
+a:-webkit-any-link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer {
+  width: 1920px;
+  height: 308px;
+  background-color: #212121;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 300px;
+  gap: 84px;
+}
+
+.footer__items-header {
+  width: 116px;
+  height: 13px;
+  left: 829px;
+  top: 3916px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-top: 72px;
+}
+
+.footer__item {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 10px;
+  color: #CBCFD4;
+}
+
+.footer__purpose {
+  margin-top: 73px;
+  margin-left: 401px;
+  /*лого уменьшилось когда сдвинула вправо*/
+}
+
+.logo_footer {
+  padding-top: 0px;
+  white-space: nowrap;
+  padding-bottom: 32px;
+}
+
+.f1 {
+  width: 116px;
+  height: 151px;
+  left: 829px;
+  top: 3916px;
+}
+
+.f2 {
+  width: 124px;
+  height: 151px;
+}
+
+.f3 {
+  width: 137px;
+  height: 119px;
+}
+
+.f4 {
+  width: 102px;
+  height: 119px;
+  margin-right: 403px;
+}
+
+.social-icon__img {
+  margin-right: 5px;
+}
+
+.footer__purpose_quote {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.main-nav a {
+  color: black;
+}
+.collection__content a{
+  color:white
+}
+
+/*
+
+
+
+*/
