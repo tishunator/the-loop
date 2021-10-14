@@ -18,12 +18,23 @@ body {
 }
 
 .main-nav {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: space-around;
-  margin-left: -30px;
-  flex: 1
+  margin-left: 363px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  width: 918px;
+  gap: 45px;
+  white-space: nowrap;
+  margin-top: 5px;
 }
+.baskett {
+position: relative;
+display: grid;
+grid-template-columns: 56px 72px 91px 50px;
+margin-top: -90px;
+margin-left: 1120px;
+gap: 37px;}
 
 .main-nav__treug {
   position: relative;
@@ -69,11 +80,16 @@ body {
 .logo__text {
   font-weight: 700;
   font-size: 24px;
+  margin-left: 69px;
 }
 
 .main-nav__item {
-  font-weight: 500;
-  font-size: 14px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+      letter-spacing: 0.03em;
+  
 }
 
 h4 {
@@ -147,7 +163,7 @@ div {
 
 .logo__img {
   position: absolute;
-  transform: translate(-120%, -10%)
+  transform: translate(17%, -10%)
 }
 
 .basket {

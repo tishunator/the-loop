@@ -3,8 +3,9 @@
   --red: #D84033;
 }
 
-li {
+a:-webkit-any-link {
   list-style: none;
+  text-decoration: none;
 }
 
 html {
@@ -15,16 +16,33 @@ html {
 body {
   width: 1920px;
   margin: 0 auto;
+  height: 4222px;
+  display: grid;
+}
+
+.visually-hidden {
+  display: none;
 }
 
 .main-nav {
-  display: flex;
-  width: 1228px;
-  align-items: center;
-  justify-content: space-around;
-  margin-left: 373px;
-    margin-top: 5px;
-  flex: 1
+  display: grid;
+  grid-template-columns: 105px 109px 89px;
+  list-style-type: none;
+  position: absolute;
+  left: 365px;
+  top: 45px;
+  gap: 35px;
+}
+
+.main-nav a {
+  color: black;
+}
+
+.main-nav__item {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17, 07px;
+  letter-spacing: 0.03em;
 }
 
 .main-nav__treug {
@@ -40,48 +58,146 @@ body {
   border-color: transparent;
   border-top-color: black;
   top: 50%;
-  right: -16%;
+  right: -5%;
   transform: translate(110%, -25%);
 }
 
 .basket__amount {
   display: inline-block;
   background-color: var(--accent);
-  border-right: 20px solid var(--accent);
-  border-left: 10px solid var(--accent);
+  border-right: 15px solid var(--accent);
+  border-left: 8px solid var(--accent);
   position: relative;
   margin-left: 0px;
-  height: 20px;
+  height: 18px;
+  font-size: 12px;
 }
 
 .basket__amount::before {
   content: "";
   display: inline-block;
-  border: 10px solid var(--accent);
+  border: 9px solid var(--accent);
   border-color: transparent;
   border-right-color: var(--accent);
-  border-right-width: 40px;
+  border-right-width: 24px;
   position: absolute;
   transform: translate(-120%, 0%);
 }
 
-.visually-hidden {
-  display: none;
+.logo__img {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 869px;
+  top: 50px;
 }
 
 .logo__text {
-  font-weight: 700;
-    font-size: 24px;
-    margin-left: 26px;
-    letter-spacing: 0.05em;
-    line-height: 29px;
+  position: absolute;
+  width: 141px;
+  height: 27px;
+  left: 929px;
+  top: 56px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  /* Black */
+  
 }
 
-.main-nav__item {
+.navForPeople {
+  list-style-type: none;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 56px 72px;
+  left: 1120px;
+  top: 45px;
+  gap: 35px;
+}
+
+.navForPeople__item {
   font-weight: 500;
   font-size: 14px;
-  line-height: 17px;
-    letter-spacing: 0.03em;
+  line-height: 17, 07px;
+  letter-spacing: 0.03em;
+}
+
+.navForPeople a {
+  color: black;
+}
+
+.BasketAmount {
+  list-style-type: none;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 30px 45px;
+  left: 1385px;
+  top: 39px;
+}
+
+.basket__amount {
+  right: -30px;
+  top: 5px;
+}
+
+/*НАВИГАЦИЯ ЗАКАНЧИВАЕТСЯ ЗДЕСЬ*/
+
+.slider {
+  width: 1100px;
+  height: 600px;
+  overflow: hidden;
+  position: relative
+}
+
+.middle {
+  position: absolute;
+  top: 435px;
+  left: 500px;
+  width: 1228px;
+  transform: translate(-12%, -50%);
+}
+
+.slides {
+  width: 400%;
+  height: 100%;
+  display: flex;
+  align-items: center
+}
+
+#r1:checked~.s1 {
+  margin-left: 0;
+  /*контролирует насколько вправо смещается*/
+}
+
+#r2:checked~.s1 {
+  margin-left: -25%;
+}
+
+#r3:checked~.s1 {
+  margin-left: -50%;
+}
+
+#r4:checked~.s1 {
+  margin-left: -75%;
+}
+
+.karusel {
+  width: 25%;
+  transition: all .6s ease;
+  /*делает красивое скольжение между слайдами*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.karusel__content {
+  align-items: center;
+  margin-left: 53px;
+  margin-top: -225px;
 }
 
 h4 {
@@ -100,6 +216,9 @@ h4 {
   font-size: 55px;
   line-height: 67px;
   letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: -13px;
+  margin-bottom: 55px;
 }
 
 .btn {
@@ -115,19 +234,22 @@ h4 {
   color: white;
   letter-spacing: 0.03em;
   position: absolute;
-  margin-top: 20px;
+  margin-top: -15px;
 }
 
-.karusel__price {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 42px;
-  line-height: 51px;
-  text-align: right;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: var(--red)
+.karusel__img {
+  width: 91%;
+  object-fit: contain;
+  margin-top: -52px;
+  margin-left: -10px;
+}
+
+.karusel__content_price {
+  position: absolute;
+  left: 907px;
+  margin-left: 57px;
+  margin-top: -263px;
+  
 }
 
 .karusel__price_old {
@@ -140,48 +262,32 @@ h4 {
   letter-spacing: 0.05em;
   text-decoration-line: line-through;
   text-transform: uppercase;
+  padding-left: 87px;
+  width: 104px;
 }
 
-.logo {
-  position: relative;
-  padding: 50px;
-  margin-left: 29px;
+.karusel__price {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 51px;
+  text-align: right;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-top: 14px;
+  margin-left: 36px;
 }
 
-.logo__img {
-  position: absolute;
-  transform: translate(-80%, -10%)
-}
-
-.basket {
-  padding-left: 50px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.slider {
-  width: 1100px;
-  height: 600px;
-  overflow: hidden;
-  position: relative
-}
-
-/*зачем слайдер и миддл разделены? если добавить значения из миддла в слайдер вроде ничего не меняется*/
-
-.middle {
-  position: relative;
-  top: 300px;
-  left: 500px;
-  width: 1228px;
-  transform: translate(-12%, -50%);
+.karusel__img_size {
+  width: 400px;
+  object-fit: contain;
 }
 
 .navigat {
   position: absolute;
-  bottom: 16px;
+  bottom: -2px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -208,61 +314,11 @@ input[name="r"] {
   visibility: hidden;
 }
 
-.slides {
-  width: 400%;
-  height: 100%;
-  display: flex;
-  align-items: center
-}
-
-.karusel {
-  width: 25%;
-  transition: all .6s ease;
-  /*делает красивое скольжение между слайдами*/
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
-
-.karusel__img {
-  width: 100%;
-  object-fit: contain;
-}
-
-.karusel__img_size {
-  width: 400px;
-  object-fit: contain;
-}
-
-.karusel__content_price {
-  position: absolute;
-  transform: translate(900px);
-  margin-left: 130px;
-  margin-top: 80px;
-}
-
-.karusel__content {
-  align-items: center;
-}
-
-#r1:checked~.s1 {
-  margin-left: 0;
-  /*контролирует насколько вправо смещается*/
-}
-
-#r2:checked~.s1 {
-  margin-left: -25%;
-}
-
-#r3:checked~.s1 {
-  margin-left: -50%;
-}
-
-#r4:checked~.s1 {
-  margin-left: -75%;
-}
+/*КАРУСЕЛЬ ЗАКАНЧИВАЕТСЯ ЗДЕСЬ*/
 
 .delivery {
+  position: absolute;
+  top: 801px;
   width: 1920px;
   height: 235px;
   background-color: #212121;
@@ -277,8 +333,10 @@ input[name="r"] {
   text-align: center;
   letter-spacing: 0.02em;
   color: white;
-  padding-top: 70px;
+  padding-top: 80px;
   text-transform: uppercase;
+  padding-top: 50px;
+  margin-bottom: -20px;
 }
 
 .delivery__text {
@@ -289,14 +347,31 @@ input[name="r"] {
   line-height: 26px;
   text-align: center;
   color: #FFFFFF;
-  padding-top: 20px;
+  padding-top: 24px;
 }
 
+/*БЕСПЛАТНАЯ ДОСТАВКА ЗАКАНЧИВАЕТСЯ ЗДЕСЬ*/
+
 .collection {
-  width: 1200px;
+  position: absolute;
+  width: 960px;
+  height: 250px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-left: 350px;
+  grid-template-columns: 960px 960px;
+  left: 780px;
+  top: 1037px;
+}
+
+.collection__content {
+  justify-self: right;
+  display: grid;
+  grid-template-columns: 750px 190px 600px 190px;
+}
+
+.collection__content_right {
+  margin-top: 36px;
+  margin-left: 415px;
+  margin-bottom: -32px;
 }
 
 .collection__header {
@@ -307,6 +382,7 @@ input[name="r"] {
   line-height: 29px;
   letter-spacing: 0.03em;
   color: #000000;
+  margin-bottom: 10px;
 }
 
 .collection__desc {
@@ -322,40 +398,43 @@ input[name="r"] {
 .collection__button {
   background-color: var(--accent);
   width: 60px;
-  height: 34px;
-  padding-left: 40px;
+  height: 31px;
+  padding-left: 21px;
   position: absolute;
-  /*Не знаю можно ли злоупотреблять этими позишионами абсолют..*/
-  margin-top: 20px;
+  margin-top: 17px;
 }
 
-.collection__content {
-  justify-self: right;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+.collection__content__girl {
+  margin-right: 390px;
 }
 
-.collection__content_right {
-  margin-top: 30px;
+.collection__img__girl {
+  margin-top: 80px;
+  margin-left: -18px;
 }
 
 .collection__img {
-  margin-top: 40px;
+  margin-top: 80px;
+  margin-left: -5px;
 }
-
+/*МУЖСКАЯ ЖЕНСКАЯ КОЛЛЕКЦИЯ ЗАКАНЧИВАЕТСЯ ЗДЕСЬ*/
+.catalog {
+  position: absolute;
+  top: 1288px;
+}
 .catalog__items {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 277px);
   gap: 20px;
   position: relative;
   width: 1250px;
   justify-items: center;
   margin-left: 336px;
+  list-style-type: none;
 }
-
 .catalog__item_desc {
   position: absolute;
-  top: 150px;
+  top: 169px;
   font-family: Montserrat;
   font-style: normal;
   font-weight: 300;
@@ -363,12 +442,11 @@ input[name="r"] {
   line-height: 26px;
   /* identical to box height */
   letter-spacing: 0.03em;
-  margin: -27px;
+  margin-left: -34px;
 }
-
 .catalog__item_desc-bottom {
   position: absolute;
-  bottom: 100px;
+  bottom: 59px;
   font-family: Montserrat;
   font-style: normal;
   font-weight: 300;
@@ -376,50 +454,84 @@ input[name="r"] {
   line-height: 26px;
   /* identical to box height */
   letter-spacing: 0.03em;
-  margin-left: -38px;
+  margin-left: -48px;
 }
 
-.catalog__item_bottom {
-  margin-left: 40px;
+.catalog__item{
+  margin-left: 0;
 }
-
-.new-model__catalog {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 1250px;
-  justify-items: center;
-  margin-left: 336px;
-  margin-right: 20px;
+.catalog__item_one  {
+  margin-left: 95px;
 }
-
-.catalog {
-  position: relative;
+.catalog__item_two {
+  margin-left: 55px;
 }
-
+.catalog__item_three{
+  margin-left: 20px;
+}
+.catalog__item_four{
+  margin-left: -20px;
+}
+.catalog__item_five {
+  margin-left: 135px;
+  margin-top: -10px;
+}
+.catalog__item_six{
+  margin-left: 99px;
+  margin-top: -10px;
+}
+.catalog__item_seven{
+  margin-left: 58px;
+  margin-top: -10px;
+}
+.catalog__item_eight{
+  margin-left: 20px;
+  margin-top: -10px;
+}
+/*Здесь заканчивается каталог*/
+.new-model{
+  position: absolute;
+    top: 1879px;
+    margin-bottom: 611px;
+    
+}
+.new-model_discount {
+  position: absolute;
+    top: 2885px;
+}
 .new-model__header {
-  margin-left: 40%;
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin-left: 784px;
+  
+  margin-bottom: 99px;
   font-size: 36px;
     font-style: normal;
     font-weight: 700;
     line-height: 44px;
     letter-spacing: 0.04em;
 }
-
-.btn_all-model {
-  margin-left: 800px;
-  margin-top: 70px;
+.new-model__header_discount{
+  padding-left: 4px;
 }
+.new-model__catalog {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4,255px);
+  width: 1250px;
+  justify-items: center;
+  margin-left: 364px;
+  margin-right: 20px;
+  list-style-type: none;
+  gap: 30px;
+  
 
+}
 .new-model__item__corner {
   width: 200px;
-  height: 100%;
+  height: 76%;
   border: 5px solid var(--accent);
   position: relative;
   background-color: #F9F6F1;
-  padding: 5px;
+  padding: 27px;
 }
 
 .new-model__item__corner::after, .new-model__item__corner::before {
@@ -447,11 +559,9 @@ input[name="r"] {
   border-top: 5px solid #F9F6F1;
   border-bottom: 5px solid #F9F6F1;
 }
-
 .new-model__img {
-  margin-left: 36px;
+  margin-left: 60px;
 }
-
 .new-model__name {
   font-family: Montserrat;
   font-style: normal;
@@ -459,9 +569,12 @@ input[name="r"] {
   font-size: 14px;
   line-height: 17px;
   text-align: center;
-  margin-top: 15px;
-}
+  margin-top: -8px;
+  width: 112px;
+  height: 29px;
+  padding-left: 44px;
 
+}
 .new-model__price {
   margin-top: 15px;
   font-family: Montserrat;
@@ -473,17 +586,24 @@ input[name="r"] {
   color: var(--accent);
 }
 
+.btn_all-model {
+  margin-left: 849px;
+  margin-top: 56px;
+  padding-left: 38px;
+}
+/*Здесь заканчиваются новые модели*/
 .form-email {
+  position: absolute;
+top:2708px;
   width: 1920px;
   background-color: #212121;
-  height: 150px;
-  margin-top: 250px;
+  height: 180px;
+  
 }
-
 .form-email__desc {
   color: white;
-  margin-left: 500px;
-  margin-top: 50px;
+  margin-left: 406px;
+  margin-top: 72px;
   position: absolute;
   font-family: Montserrat;
   font-style: normal;
@@ -494,13 +614,19 @@ input[name="r"] {
   text-align: center;
   letter-spacing: 0.02em;
 }
-
 .form-email__form {
   margin-left: 1100px;
   margin-top: 50px;
   position: absolute;
 }
+.form-email__input {
+  height: 35px;
 
+  width: 200px;
+  margin-top: 21px;
+    margin-left: -60px;
+    padding-left: 51px;
+}
 .form-email__button {
   font-family: Montserrat;
   font-style: normal;
@@ -510,36 +636,34 @@ input[name="r"] {
   /* identical to box height */
   text-align: center;
   text-transform: uppercase;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 34px 10px 33px;
   background-color: var(--accent);
-  color: white
+  color: white;
+  position: absolute;
+  margin: 20px 0px 0px 33px;
+  
+
 }
-
-.form-email__input {
-  height: 35px;
-  margin-right: 10px;
-  width: 200px;
-}
-
-/* Что такое webkit*/
-
-a:-webkit-any-link {
-  cursor: pointer;
-  text-decoration: none;
+/*Скидки и подарки заканчиваются здесь*/
+.new-model__img_discount {
+  margin-left: 28px;
 }
 
 .footer a {
   color: white;
+  
 }
 
 .footer {
+  position: absolute;
+  top: 3837px;
   width: 1920px;
-  height: 308px;
+  height: 310px;
   background-color: #212121;
   color: white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  margin-top: 300px;
+ 
   gap: 84px;
 }
 
@@ -555,9 +679,17 @@ a:-webkit-any-link {
   line-height: 12px;
   align-items: center;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   padding-top: 72px;
+
 }
+.footer__items{
+  list-style-type: none;
+}
+/*.footer__items{
+  margin-left: 135px;
+    margin-top: 8px;
+}*/
 
 .footer__item {
   font-family: Montserrat;
@@ -572,15 +704,20 @@ a:-webkit-any-link {
 }
 
 .footer__purpose {
-  margin-top: 73px;
-  margin-left: 401px;
+  margin-top: 71px;
+  margin-left: 402px;
+  width: 210px;
   /*лого уменьшилось когда сдвинула вправо*/
 }
 
 .logo_footer {
-  padding-top: 0px;
+  position: absolute;
   white-space: nowrap;
-  padding-bottom: 32px;
+  
+  margin-left: -865px;
+    margin-top: -49px;
+    width: 121px;
+    
 }
 
 .f1 {
@@ -588,26 +725,34 @@ a:-webkit-any-link {
   height: 151px;
   left: 829px;
   top: 3916px;
+  margin-left: 15px; 
+  margin-top: 8px;
 }
 
 .f2 {
   width: 124px;
   height: 151px;
+  margin-top: 8px;
+  margin-left: -611px;
 }
 
 .f3 {
   width: 137px;
   height: 119px;
+  margin-top: 8px;
+  margin-left: -546px;
 }
 
 .f4 {
   width: 102px;
   height: 119px;
-  margin-right: 403px;
+  margin-left: -490px;
+  margin-top: 8px;
 }
 
 .social-icon__img {
-  margin-right: 5px;
+  margin-right: 10px;
+  margin-left: 3px;
 }
 
 .footer__purpose_quote {
@@ -618,6 +763,8 @@ a:-webkit-any-link {
   line-height: 22px;
   letter-spacing: 0em;
   text-align: left;
+  margin-top: 73px;
+
 }
 .main-nav a {
   color: black;
@@ -626,8 +773,26 @@ a:-webkit-any-link {
   color:white
 }
 
-/*
+.new-model__header_discount{
+  margin-top: 153px;
 
+}
+.copyright {
+  color:black;
+  
 
+font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 22px;
+white-space: nowrap;
+margin-left: 404px;
+margin-top: 8px;
+  
 
-*/
+}
+.copyright_right{
+  margin-left: 569px;
+    margin-top: 10px;
+}
