@@ -14,6 +14,7 @@ html {
 }
 
 body {
+  position: relative;
   width: 1920px;
   margin: 0 auto;
   height: 4222px;
@@ -106,7 +107,6 @@ body {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   /* Black */
-  
 }
 
 .navForPeople {
@@ -249,7 +249,6 @@ h4 {
   left: 907px;
   margin-left: 57px;
   margin-top: -263px;
-  
 }
 
 .karusel__price_old {
@@ -417,11 +416,14 @@ input[name="r"] {
   margin-top: 80px;
   margin-left: -5px;
 }
+
 /*МУЖСКАЯ ЖЕНСКАЯ КОЛЛЕКЦИЯ ЗАКАНЧИВАЕТСЯ ЗДЕСЬ*/
+
 .catalog {
   position: absolute;
   top: 1288px;
 }
+
 .catalog__items {
   display: grid;
   grid-template-columns: repeat(4, 277px);
@@ -432,6 +434,7 @@ input[name="r"] {
   margin-left: 336px;
   list-style-type: none;
 }
+
 .catalog__item_desc {
   position: absolute;
   top: 169px;
@@ -444,6 +447,7 @@ input[name="r"] {
   letter-spacing: 0.03em;
   margin-left: -34px;
 }
+
 .catalog__item_desc-bottom {
   position: absolute;
   bottom: 59px;
@@ -457,74 +461,85 @@ input[name="r"] {
   margin-left: -48px;
 }
 
-.catalog__item{
+.catalog__item {
   margin-left: 0;
 }
-.catalog__item_one  {
+
+.catalog__item_one {
   margin-left: 95px;
 }
+
 .catalog__item_two {
   margin-left: 55px;
 }
-.catalog__item_three{
+
+.catalog__item_three {
   margin-left: 20px;
 }
-.catalog__item_four{
+
+.catalog__item_four {
   margin-left: -20px;
 }
+
 .catalog__item_five {
   margin-left: 135px;
   margin-top: -10px;
 }
-.catalog__item_six{
+
+.catalog__item_six {
   margin-left: 99px;
   margin-top: -10px;
 }
-.catalog__item_seven{
+
+.catalog__item_seven {
   margin-left: 58px;
   margin-top: -10px;
 }
-.catalog__item_eight{
+
+.catalog__item_eight {
   margin-left: 20px;
   margin-top: -10px;
 }
+
 /*Здесь заканчивается каталог*/
-.new-model{
+
+.new-model {
   position: absolute;
-    top: 1879px;
-    margin-bottom: 611px;
-    
+  top: 1879px;
+  margin-bottom: 611px;
 }
+
 .new-model_discount {
   position: absolute;
-    top: 2885px;
+  top: 2885px;
 }
+
 .new-model__header {
   margin-left: 784px;
-  
   margin-bottom: 99px;
   font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 44px;
-    letter-spacing: 0.04em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0.04em;
 }
-.new-model__header_discount{
+
+.new-model__header_discount {
   padding-left: 4px;
 }
+
 .new-model__catalog {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4,255px);
+  grid-template-columns: repeat(4, 255px);
   width: 1250px;
   justify-items: center;
   margin-left: 364px;
   margin-right: 20px;
   list-style-type: none;
   gap: 30px;
-  
-
 }
+
 .new-model__item__corner {
   width: 200px;
   height: 76%;
@@ -559,9 +574,11 @@ input[name="r"] {
   border-top: 5px solid #F9F6F1;
   border-bottom: 5px solid #F9F6F1;
 }
+
 .new-model__img {
   margin-left: 60px;
 }
+
 .new-model__name {
   font-family: Montserrat;
   font-style: normal;
@@ -573,8 +590,8 @@ input[name="r"] {
   width: 112px;
   height: 29px;
   padding-left: 44px;
-
 }
+
 .new-model__price {
   margin-top: 15px;
   font-family: Montserrat;
@@ -591,15 +608,17 @@ input[name="r"] {
   margin-top: 56px;
   padding-left: 38px;
 }
+
 /*Здесь заканчиваются новые модели*/
+
 .form-email {
   position: absolute;
-top:2708px;
+  top: 2708px;
   width: 1920px;
   background-color: #212121;
   height: 180px;
-  
 }
+
 .form-email__desc {
   color: white;
   margin-left: 406px;
@@ -614,19 +633,21 @@ top:2708px;
   text-align: center;
   letter-spacing: 0.02em;
 }
+
 .form-email__form {
   margin-left: 1100px;
   margin-top: 50px;
   position: absolute;
 }
+
 .form-email__input {
   height: 35px;
-
   width: 200px;
   margin-top: 21px;
-    margin-left: -60px;
-    padding-left: 51px;
+  margin-left: -60px;
+  padding-left: 51px;
 }
+
 .form-email__button {
   font-family: Montserrat;
   font-style: normal;
@@ -641,17 +662,16 @@ top:2708px;
   color: white;
   position: absolute;
   margin: 20px 0px 0px 33px;
-  
-
 }
+
 /*Скидки и подарки заканчиваются здесь*/
+
 .new-model__img_discount {
   margin-left: 28px;
 }
 
 .footer a {
   color: white;
-  
 }
 
 .footer {
@@ -663,7 +683,6 @@ top:2708px;
   color: white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
- 
   gap: 84px;
 }
 
@@ -681,11 +700,12 @@ top:2708px;
   text-transform: uppercase;
   margin-bottom: 18px;
   padding-top: 72px;
-
 }
-.footer__items{
+
+.footer__items {
   list-style-type: none;
 }
+
 /*.footer__items{
   margin-left: 135px;
     margin-top: 8px;
@@ -713,11 +733,9 @@ top:2708px;
 .logo_footer {
   position: absolute;
   white-space: nowrap;
-  
   margin-left: -865px;
-    margin-top: -49px;
-    width: 121px;
-    
+  margin-top: -49px;
+  width: 121px;
 }
 
 .f1 {
@@ -725,7 +743,7 @@ top:2708px;
   height: 151px;
   left: 829px;
   top: 3916px;
-  margin-left: 15px; 
+  margin-left: 15px;
   margin-top: 8px;
 }
 
@@ -764,35 +782,33 @@ top:2708px;
   letter-spacing: 0em;
   text-align: left;
   margin-top: 73px;
-
 }
+
 .main-nav a {
   color: black;
 }
-.collection__content a{
-  color:white
+
+.collection__content a {
+  color: white
 }
 
-.new-model__header_discount{
+.new-model__header_discount {
   margin-top: 153px;
-
 }
+
 .copyright {
-  color:black;
-  
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 22px;
-white-space: nowrap;
-margin-left: 404px;
-margin-top: 8px;
-  
-
+  color: black;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  white-space: nowrap;
+  margin-left: 404px;
+  margin-top: 8px;
 }
-.copyright_right{
+
+.copyright_right {
   margin-left: 569px;
-    margin-top: 10px;
+  margin-top: 10px;
 }
