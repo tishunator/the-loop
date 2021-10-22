@@ -1,4 +1,4 @@
 # the-loop
 The project with css, html, js
 
- https://tishunator.github.io/Clothes.html
+ https://tishunator.github.io/the-loop/Clothes.html
