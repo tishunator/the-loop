@@ -15,10 +15,10 @@ html {
 
 body {
   position: relative;
-  width: 1920px;
   margin: 0 auto;
   height: 4222px;
   display: grid;
+  min-width: 1920px;
 }
 
 .visually-hidden {
